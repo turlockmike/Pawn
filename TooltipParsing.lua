@@ -63,6 +63,7 @@ PawnNormalizationRegexes =
 {
 	{"^|c........(.+)$", "%1"}, -- "|cFF 0FF 0Heroic" --> "Heroic"
 	{L.NormalizationEnchant, "%1"}, -- "Enchanted: +50 Strength" --> "+50 Strength" (ENCHANTED_TOOLTIP_LINE)
+	{L.NormalizationZoneBonus, "%1"}, -- Forever: "Equip: +14 Attack Power. This effect is tripled in ..." (270275)
 	{"^([%w%s%.]+) %+(%d+)%%?$", "+%2 %1"}, -- "Stamina +5" --> "+5 Stamina"
 }
 
@@ -317,7 +318,7 @@ PawnRegexes =
 	{L.EnchantmentHealth, "Stamina", 1/12.5, PawnSingleStatMultiplier}, -- +100 health head/leg enchantment (counting 1 HP = 1/12.5 Stamina)
 	{L.EnchantmentHealth2, "Stamina", 1/12.5, PawnSingleStatMultiplier}, -- +150 health enchantment (counting 1 HP = 1/12.5 Stamina)
 	{L.Armor, "Armor"}, -- normal armor and cloak armor enchantments
-	{L.Armor2, "Armor"}, -- unused in English
+	{L.Armor2, "Armor"}, -- Forever "+60 Bonus Armor", /pawn compare 1717; also some non-English clients
 	{L.EnchantmentArmorKit, "Armor"}, -- armor kits
 	{L.FireResist, "FireResist"}, -- /pawn compare 12609
 	{L.NatureResist, "NatureResist"}, -- /pawn compare 12609
